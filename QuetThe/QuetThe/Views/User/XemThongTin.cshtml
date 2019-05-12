@@ -1,0 +1,151 @@
+﻿@model IEnumerable<QuetThe.Models.TicketMonth>
+
+@{
+    ViewBag.Title = "XemThongTin";
+}
+
+<h2>XemThongTin</h2>
+@section jsFooter{   
+    <script src="~/Scripts/eidtUser.js"></script>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Stt)
+        </th>
+        
+
+        <th >
+            @Html.DisplayNameFor(model => model.TenKH)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Company)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.IDPart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChargesAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Account)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DayUnLimit)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+@using (Html.BeginForm("doiten", "User", new { @id = item.ID }))
+   {
+    <td>
+        @Html.DisplayFor(modelItem => item.Stt)
+    </td>
+
+
+    <td style="text-align:center;width:200px">
+        <input class="txtName_@item.ID" name="txtName" value="@item.TenKH" type="text">
+    
+    </td>
+   
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Company)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+
+    <td class="type_@item.ID">
+        @Html.DisplayFor(modelItem => item.IDPart)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateStart)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateEnd)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Note)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Amount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ChargesAmount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+        <a href="#" class="btn-active" data-id="@item.ID">@(item.Status == 1 ? "Kích hoạt": "Đóng")</a>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Account)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Images)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DayUnLimit)
+    </td>
+    <td>
+        <div id="demo-ajax">
+            <div style="padding-bottom:10px">
+                <button class="btnCatThe" data-id="@item.ID" style="border:4px;padding:5px;width:50px;border-radius:10px;padding-top:10px;width:90px">
+                    @Html.ActionLink("Cat the", "", new { id = item.ID })
+                </button>
+            </div>
+            <div>
+                <button class="btnChuyenThe" data-id="@item.ID" style="border:4px;padding:5px;width:50px;border-radius:10px;padding-bottom:10px;width:90px">
+                    @Html.ActionLink("Chuyen the", "", new { id = item.ID })
+                </button>
+            </div>
+            <div style="padding-top:10px">
+                <button id="btn" class="btnSuaten" data-id="@item.ID" style="border:4px;padding:5px;width:50px;border-radius:10px;padding-bottom:10px;width:90px">
+                    @Html.ActionLink("Sua ten", "", new { id = item.ID })
+                </button>
+                @*<input type="submit" class="btn btn-info btn-sm" data-tooltip-text="Cập Nhật" value="Doi ten" /><span class="tooltiptext"></span>*@
+            </div>
+
+
+        </div>
+
+    </td>
+}
+</tr>
+
+    }
+
+</table>
+

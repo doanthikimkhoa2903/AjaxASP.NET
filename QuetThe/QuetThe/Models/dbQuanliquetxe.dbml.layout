@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 16.875" name="dbQuanliquetxe">
+  <DataContextMoniker Name="/dbQuanliquetxeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8f60f2dd-8b89-45bb-b5f7-83d85f7c1cee" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/BaoCao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="875491be-48e0-4fe7-b9a3-44af94eb012e" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8600ab3d-232f-45fa-92b1-33659a2021f2" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/WorkAssign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12d7042e-a862-43b9-b59a-275954e75bc0" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b74c101-6383-4bb4-889a-b859eaa51690" absoluteBounds="0.75, 3.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/Barier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a337b582-2cb2-445a-bef3-77dd676ae929" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8921f198-34f6-473a-9fa9-9f2eb3cb9064" absoluteBounds="3.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/BienSoDen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73e07ed2-713c-4ce7-9aee-944eeaa67e2f" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84f320f9-227d-4317-9e7b-0b9e9bc61c2d" absoluteBounds="3.75, 5.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/BlackBox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9bc692d4-0aa1-462a-a1cf-b73f7bb3b3ee" absoluteBounds="3.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d128665c-774d-4940-a351-b4cce8444142" absoluteBounds="6.75, 0.75, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/Car" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b549c7c7-53ef-4271-ab4f-718740cff47f" absoluteBounds="6.765, 1.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d14be54a-dcdd-4099-bac1-436df4d18af0" absoluteBounds="6.75, 6.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/Computer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2da346f8-c3ba-41c6-b829-75a8f3de23ae" absoluteBounds="6.765, 7.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ff3ad10-c497-4fb7-acbb-d12ffcc6889d" absoluteBounds="0.75, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/Functional" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2eaf8501-8e5a-443c-b06d-a36f2ce2838f" absoluteBounds="0.765, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51cce541-b274-40df-ae49-0e8e45ec6a16" absoluteBounds="9.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="309c82bc-b636-44ae-b200-9ee880515a92" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c83ace50-3431-4df2-88ff-2608fc07c2b6" absoluteBounds="9.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/Part" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7cf45dd-f1ba-4533-9282-d488cfa7be44" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ad9e353-d89e-4faf-9c31-a11f96cf741a" absoluteBounds="9.75, 6.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/SetCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fddd7ba-54d8-4d59-b1aa-5a4f6c7381a1" absoluteBounds="9.765, 7.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2595135a-3377-4e5c-8a44-9ec1b6c3c51a" absoluteBounds="0.75, 10.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/SmartCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9fdc3d87-2e1f-42d0-bbef-6e2a9e93de9b" absoluteBounds="0.765, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d4b032b-f67e-4153-b548-ceae71ce0db5" absoluteBounds="3.75, 11.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/TicketLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f6815b7-625c-410e-9269-afa8d7d3cb3e" absoluteBounds="3.765, 12.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2786c02-144a-440a-a60c-9758de36bf42" absoluteBounds="6.75, 11.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/TicketMoney" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e5407a2-e390-465a-b6f0-b0b4b1bb03cf" absoluteBounds="6.765, 12.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9e26f46-d4a5-474c-8078-8a49dfc376b3" absoluteBounds="9.75, 11.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/TicketMonth" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd9b8412-bf72-4407-926b-1cbf72488220" absoluteBounds="9.765, 12.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f1ab931-a035-492b-83b2-46368bdadc5a" absoluteBounds="12.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbQuanliquetxeDataContext/UserCar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d814110c-e082-42ad-a25d-d093b8595934" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
