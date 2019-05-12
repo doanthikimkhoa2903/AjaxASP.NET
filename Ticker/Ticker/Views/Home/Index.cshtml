@@ -1,0 +1,170 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/TicketMonths.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="container">
+         <h1 style = "font-size:medium;text-align:center;padding:10px;margin:10px;color:dodgerblue" > TicketMonths</h1>
+    <div id="list">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>RowID</th>
+                    <th>Stt</th>
+                    <th>ID</th>
+                    <th>ProcessDate</th>
+                    <th>Digit</th>
+                    <th>TenKH</th>
+                    <th>CMND</th>
+                    <th>Company</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>CarKind</th>
+                    <th>IDPart</th>
+                    <th>DateStart</th>
+                    <th>DateEnd</th>
+                    <th>Note</th>
+                    <th>Amount</th>
+                    <th>ChangesAmount</th>
+                    <th>Status</th>
+                    <th>Account</th>
+                    <th>Images</th>
+                    <th>DayUnLimit</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+        </table>
+    </div>
+    <button type = "button" class="btn btn-primary btn-lg" onclick="return _getAll();">
+        Load
+    </button>
+    <!-- Button trigger modal -->
+    <button type = "button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Create
+    </button>
+    <hr />
+   
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type = "button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Ticket</h4>
+            </div>
+            <div class="modal-body">
+                <form id = "formStudent">
+                    <div class="form-group">
+                        <label for="RowID">RowID</label>
+                        <input type = "text" class="form-control" id="RowID" placeholder="RowID" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="Stt">STT</label>
+                        <input type = "text" class="form-control" id="Stt" placeholder="Stt">
+                    </div>
+                    <div class="form-group">
+                        <label for="ID">ID</label>
+                        <input type = "text" class="form-control" id="ID" placeholder="ID" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ProcessDate">ProcessDate</label>
+                        <input type = "datetime" class="form-control" id="ProcessDate" placeholder="ProcessDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="Digit">Digit</label>
+                        <input type = "text" class="form-control" id="Digit" placeholder="Digit">
+                    </div>
+                    <div class="form-group">
+                        <label for="TenKH">TenKH</label>
+                        <input type = "text" class="form-control" id="TenKH" placeholder="TenKH" />
+                    </div>
+                    <div class="form-group">
+                        <label for="CMND">CMND</label>
+                        <input type = "text" class="form-control" id="CMND" placeholder="CMND">
+                    </div>
+                    <div class="form-group">
+                        <label for="Company">Company</label>
+                        <input type = "text" class="form-control" id="Company" placeholder="Company">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type = "email" class="form-control" id="Email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">Address</label>
+                        <input type = "text" class="form-control" id="Address" placeholder="Address" />
+                    </div>
+                    <div class="form-group">
+                        <label for="CarKind">CarKind</label>
+                        <input type = "text" class="form-control" id="CarKind" placeholder="CarKind">
+                    </div>
+                    <div class="form-group">
+                        <label for="IDPart">IDPart</label>
+                        <input type = "number" class="form-control" id="IDPart" placeholder="IDPart">
+                    </div>
+                    <div class="form-group">
+                        <label for="DateStart">DateStart</label>
+                        <input type = "datetime" class="form-control" id="DateStart" placeholder="DateStart">
+                    </div>
+                    <div class="form-group">
+                        <label for="DateEnd">DateEnd</label>
+                        <input type = "datetime" class="form-control" id="DateEnd" placeholder="DateEnd"  />
+                    </div>
+                    <div class="form-group">
+                        <label for="Note">Note</label>
+                        <input type = "text" class="form-control" id="Note" placeholder="Note">
+                    </div>
+                    <div class="form-group">
+                        <label for="Amount">Amount</label>
+                        <input type = "text" class="form-control" id="Amount" placeholder="Amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="ChargesAmount">ChargesAmount</label>
+                        <input type = "text" class="form-control" id="ChargesAmount" placeholder="ChargesAmount">
+                    </div>
+                    <div class="form-group">
+                        <label for="Status">Status</label>
+                        <input type = "text" class="form-control" id="Status" placeholder="Status">
+                    </div>
+                    <div class="form-group">
+                        <label for="Account">Account</label>
+                        <input type = "text" class="form-control" id="Account" placeholder="Account">
+                    </div>
+                    <div class="form-group">
+                        <label for="Images">Images</label>
+                        <input type = "text" class="form-control" id="Images" placeholder="Images">
+                    </div>
+                    <div class="form-group">
+                        <label for="DayUnLimit">DayUnLimit</label>
+                        <input type = "datetime" class="form-control" id="DayUnLimit" placeholder="DayUnLimit">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type = "button" class="btn btn-primary" onclick="return _add();" id="btnAdd">Add</button>
+                <button type = "button" class="btn btn-primary" onclick="return _edit();" id="btnUpdate" style="display:none">Update</button>
+            </div>
+        </div>
+    </div>
+    </div>
+        </div>
+</body>
+</html>

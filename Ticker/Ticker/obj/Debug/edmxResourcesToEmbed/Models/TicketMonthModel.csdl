@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParkingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BaoCao">
+    <Key>
+      <PropertyRef Name="Thang" />
+      <PropertyRef Name="LoaiXe" />
+    </Key>
+    <Property Name="Thang" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LoaiXe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LuotVao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LuotRa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Barier">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" />
+    <Property Name="DateTick" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Way" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDPart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsTicketMonth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BienSoDen">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Digit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BlackBox">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TimeStart" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TimeStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="Digit" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IDIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDOut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CostIn" Type="Int32" />
+    <Property Name="Cost" Type="Int32" />
+    <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Seri" Type="Int32" />
+    <Property Name="IDTicketMonth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDPart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Images2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Images3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Images4" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="MatThe" Type="Int32" />
+    <Property Name="Computer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CostBefore" Type="Int32" />
+    <Property Name="DateUpdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Computer">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="IDPart" />
+      <PropertyRef Name="Normal1" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="IDPart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Normal1" Type="Int32" Nullable="false" />
+    <Property Name="Normal2" Type="Int32" Nullable="false" />
+    <Property Name="Normal3" Type="Int32" Nullable="false" />
+    <Property Name="Night" Type="Int32" Nullable="false" />
+    <Property Name="HourBegin" Type="Int32" Nullable="false" />
+    <Property Name="HourEnd" Type="Int32" Nullable="false" />
+    <Property Name="HourBeginPT" Type="Int32" />
+    <Property Name="HourEndPT" Type="Int32" />
+    <Property Name="Normal4" Type="Int32" />
+    <Property Name="isAdd" Type="Int32" />
+    <Property Name="UnitTicket" Type="Int32" />
+    <Property Name="MoneyTicket" Type="Int32" />
+    <Property Name="NewTicket" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Functional">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sec" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="LoaiThaoTac" />
+      <PropertyRef Name="NgayXuly" />
+    </Key>
+    <Property Name="LoaiThaoTac" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThongTin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NguoiXuLy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayXuly" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="May" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Part">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Sign" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Limit" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SetCard">
+    <Key>
+      <PropertyRef Name="Kind" />
+    </Key>
+    <Property Name="Kind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="isEmSaveLostTicket" Type="Boolean" />
+    <Property Name="isSeeReport" Type="Boolean" />
+    <Property Name="numberOfDay" Type="Int32" />
+    <Property Name="isGetMoneyTicket" Type="Boolean" />
+    <Property Name="LostCard" Type="Int32" />
+    <Property Name="TotalSpace" Type="Int32" />
+    <Property Name="TicketSpace" Type="Int32" />
+    <Property Name="TicketLimitDay" Type="Int32" />
+    <Property Name="Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NightLimit" Type="Int32" />
+    <Property Name="TitleReport" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SmartCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Identify" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Using" Type="Boolean" Nullable="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="DayUnlimit" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TicketLog">
+    <Key>
+      <PropertyRef Name="ProcessType" />
+      <PropertyRef Name="STT" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DateProcess" />
+      <PropertyRef Name="Digit" />
+    </Key>
+    <Property Name="RowID" Type="Int32" />
+    <Property Name="ProcessType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="STT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateProcess" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Digit" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenKH" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CarKind" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IDPart" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DateStart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateEnd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ChargesAmount" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DayUnLimit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TicketMoney">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="Month" />
+    </Key>
+    <Property Name="RowID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Month" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Stt" Type="Int32" />
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Digit" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TenKH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Company" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IDPart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TicketMonth">
+    <Key>
+      <PropertyRef Name="Stt" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ProcessDate" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stt" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProcessDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Digit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenKH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CMND" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Company" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CarKind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDPart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateStart" Type="DateTime" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChargesAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DayUnLimit" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserCar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="Working" Type="Boolean" />
+    <Property Name="IDFunct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkAssign">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TimeStart" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TimeStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="Computer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ParkingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BaoCaos" EntityType="Self.BaoCao" />
+    <EntitySet Name="Bariers" EntityType="Self.Barier" />
+    <EntitySet Name="BienSoDens" EntityType="Self.BienSoDen" />
+    <EntitySet Name="BlackBoxes" EntityType="Self.BlackBox" />
+    <EntitySet Name="Cars" EntityType="Self.Car" />
+    <EntitySet Name="Computers" EntityType="Self.Computer" />
+    <EntitySet Name="Functionals" EntityType="Self.Functional" />
+    <EntitySet Name="Logs" EntityType="Self.Log" />
+    <EntitySet Name="Parts" EntityType="Self.Part" />
+    <EntitySet Name="SetCards" EntityType="Self.SetCard" />
+    <EntitySet Name="SmartCards" EntityType="Self.SmartCard" />
+    <EntitySet Name="TicketLogs" EntityType="Self.TicketLog" />
+    <EntitySet Name="TicketMoneys" EntityType="Self.TicketMoney" />
+    <EntitySet Name="TicketMonths" EntityType="Self.TicketMonth" />
+    <EntitySet Name="UserCars" EntityType="Self.UserCar" />
+    <EntitySet Name="WorkAssigns" EntityType="Self.WorkAssign" />
+    <FunctionImport Name="BC_DANH_SÁCH_VÉ_THÁNG" ReturnType="Collection(ParkingModel.BC_DANH_SÁCH_VÉ_THÁNG_Result)">
+      <Parameter Name="DanhSachVeThang" Mode="In" Type="String" />
+      <Parameter Name="DanhSach2" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="BC_DANH_SÁCH_VÉ_THÁNG_TỔNG_QUÁT" ReturnType="Collection(ParkingModel.BC_DANH_SÁCH_VÉ_THÁNG_TỔNG_QUÁT_Result)">
+      <Parameter Name="DanhSachVeThang" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="BC_DANH_SÁCH_VÉ_THÁNG1" ReturnType="Collection(ParkingModel.BC_DANH_SÁCH_VÉ_THÁNG1_Result)">
+      <Parameter Name="DanhSachVeThang" Mode="In" Type="String" />
+      <Parameter Name="DanhSach" Mode="In" Type="String" />
+      <Parameter Name="type" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="BC_TIỀN_THU_VÉ_THÁNG" ReturnType="Collection(ParkingModel.BC_TIỀN_THU_VÉ_THÁNG_Result)">
+      <Parameter Name="DanhSachVeThang" Mode="In" Type="String" />
+      <Parameter Name="DanhSach2" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="CarLogTicketmonthDetail" ReturnType="Collection(ParkingModel.CarLogTicketmonthDetail_Result)">
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CT_CÔNG_THỨC_CÔNG_VĂN" ReturnType="Collection(ParkingModel.CT_CÔNG_THỨC_CÔNG_VĂN_Result)">
+      <Parameter Name="BatDau" Mode="In" Type="DateTime" />
+      <Parameter Name="KetThuc" Mode="In" Type="DateTime" />
+      <Parameter Name="LoaiXe" Mode="In" Type="Int32" />
+      <Parameter Name="Type" Mode="In" Type="Int32" />
+      <Parameter Name="InputParam" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="cttt_CÔNG_THỨC_TĂNG_THEO_GIỜ" ReturnType="Collection(Int32)">
+      <Parameter Name="start" Mode="In" Type="DateTime" />
+      <Parameter Name="end" Mode="In" Type="DateTime" />
+      <Parameter Name="idpart" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DailyReportDetail" ReturnType="Collection(ParkingModel.DailyReportDetail_Result)">
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="DailyReportTotal" ReturnType="Collection(ParkingModel.DailyReportTotal_Result)">
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="getcttt1" ReturnType="Collection(Int32)">
+      <Parameter Name="start" Mode="In" Type="DateTime" />
+      <Parameter Name="end" Mode="In" Type="DateTime" />
+      <Parameter Name="idpart" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getmoney" ReturnType="Collection(Int32)">
+      <Parameter Name="daystart" Mode="In" Type="Int32" />
+      <Parameter Name="dayend" Mode="In" Type="Int32" />
+      <Parameter Name="idpart" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MonthlyReportTotal" ReturnType="Collection(ParkingModel.MonthlyReportTotal_Result)">
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="PossReportTotal" ReturnType="Collection(ParkingModel.PossReportTotal_Result)">
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="WeeklyReportTotal" ReturnType="Collection(ParkingModel.WeeklyReportTotal_Result)">
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="BC_DANH_SÁCH_VÉ_THÁNG_Result">
+    <Property Type="String" Name="tenhienthi" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="tenthamso" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="DataType" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="defaulttype" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="giatrithamso" Nullable="false" MaxLength="82" />
+  </ComplexType>
+  <ComplexType Name="BC_DANH_SÁCH_VÉ_THÁNG_TỔNG_QUÁT_Result">
+    <Property Type="String" Name="tenhienthi" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="tenthamso" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="DataType" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="defaulttype" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="giatrithamso" Nullable="false" MaxLength="82" />
+  </ComplexType>
+  <ComplexType Name="BC_DANH_SÁCH_VÉ_THÁNG1_Result">
+    <Property Type="String" Name="tenhienthi" Nullable="false" MaxLength="18" />
+    <Property Type="String" Name="tenthamso" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="DataType" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="defaulttype" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="giatrithamso" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="BC_TIỀN_THU_VÉ_THÁNG_Result">
+    <Property Type="Int32" Name="RowID" Nullable="false" />
+    <Property Type="Int32" Name="Stt" Nullable="false" />
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ProcessDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Digit" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CMND" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Company" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CarKind" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IDPart" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DateStart" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateEnd" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Amount" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ChargesAmount" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="Account" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Images" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DayUnLimit" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CarLogTicketmonthDetail_Result">
+    <Property Type="String" Name="THAO_TÁC" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="NGÀY_XỬ_LÝ" Nullable="false" Precision="23" />
+    <Property Type="String" Name="HỌ_TÊN" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BIỂN_SỐ" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="SỐ_TIỀN" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="LOẠI_XE" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="GHI_CHÚ" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LÀ_CÁN_BỘ" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NGÀY_BẮT_ĐẦU" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NGÀY_HẾT_HẠN" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="CT_CÔNG_THỨC_CÔNG_VĂN_Result">
+    <Property Type="Int32" Name="LOẠI_XE" Nullable="false" />
+    <Property Type="Int32" Name="GIỜ_BẮT_ĐẦU_ĐÊM" Nullable="false" />
+    <Property Type="Int32" Name="PHÚT_BẮT_ĐẦU_ĐÊM" Nullable="false" />
+    <Property Type="Int32" Name="GIỜ_KẾT_THÚC_ĐÊM" Nullable="false" />
+    <Property Type="Int32" Name="PHÚT_KẾT_THÚC_ĐÊM" Nullable="false" />
+    <Property Type="Int32" Name="GIÁ_NGÀY" Nullable="false" />
+    <Property Type="Int32" Name="GIÁ_ĐÊM" Nullable="false" />
+    <Property Type="Int32" Name="GIÁ_QUA_NGÀY" Nullable="false" />
+    <Property Type="Int32" Name="GIAO_NGÀY_VÀ_ĐÊM__PHÚT_" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DailyReportDetail_Result">
+    <Property Type="String" Name="MÃ_THẺ" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BIỂN_SỐ" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="NGÀY_VÀO" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="NGÀY_RA" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="TIỀN_XE" Nullable="true" />
+    <Property Type="String" Name="MÁY" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VÉ_THÁNG" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="DailyReportTotal_Result">
+    <Property Type="String" Name="MÁY" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TIỀN_THU_VÃNG_LAI" Nullable="false" />
+    <Property Type="Int32" Name="VÉ_VÃNG_LAI" Nullable="false" />
+    <Property Type="Int32" Name="TIỀN_THU_VÉ_THÁNG" Nullable="false" />
+    <Property Type="Int32" Name="VÉ_THÁNG_RA" Nullable="false" />
+    <Property Type="Int32" Name="TỔNG_CỘNG" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="MonthlyReportTotal_Result">
+    <Property Type="String" Name="NGÀY" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TIỀN_XE_LƯỢT" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_THÊM_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_GIA_HẠN_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_XÓA_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_MẤT_THẺ" Nullable="true" />
+    <Property Type="Int32" Name="TỔNG_TIỀN_THU" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_TẠO_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_GIA_HẠN_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_XÓA_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_MẤT_THẺ" Nullable="true" />
+    <Property Type="Int32" Name="XÓA_DỮ_LIỆU_XE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PossReportTotal_Result">
+    <Property Type="String" Name="HỌ_TÊN" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="BIỂN_SỐ" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="THỜI_GIAN_VÀO" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="THỜI_GIAN_RA" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="WeeklyReportTotal_Result">
+    <Property Type="String" Name="NGÀY" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TIỀN_XE_LƯỢT" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_THÊM_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_GIA_HẠN_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_XÓA_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="TIỀN_MẤT_THẺ" Nullable="true" />
+    <Property Type="Int32" Name="TỔNG_TIỀN_THU" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_TẠO_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_GIA_HẠN_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_XÓA_VÉ_THÁNG" Nullable="true" />
+    <Property Type="Int32" Name="SỐ_LƯỢT_MẤT_THẺ" Nullable="true" />
+    <Property Type="Int32" Name="XÓA_DỮ_LIỆU_XE" Nullable="true" />
+  </ComplexType>
+</Schema>

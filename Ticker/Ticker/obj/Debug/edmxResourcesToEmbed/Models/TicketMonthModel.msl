@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ParkingModelStoreContainer" CdmEntityContainer="ParkingEntities">
+    <EntitySetMapping Name="BaoCaos">
+      <EntityTypeMapping TypeName="ParkingModel.BaoCao">
+        <MappingFragment StoreEntitySet="BaoCao">
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="LoaiXe" ColumnName="LoaiXe" />
+          <ScalarProperty Name="LuotVao" ColumnName="LuotVao" />
+          <ScalarProperty Name="LuotRa" ColumnName="LuotRa" />
+          <ScalarProperty Name="Tien" ColumnName="Tien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bariers">
+      <EntityTypeMapping TypeName="ParkingModel.Barier">
+        <MappingFragment StoreEntitySet="Barier">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="DateTick" ColumnName="DateTick" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Way" ColumnName="Way" />
+          <ScalarProperty Name="IDPart" ColumnName="IDPart" />
+          <ScalarProperty Name="IsTicketMonth" ColumnName="IsTicketMonth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BienSoDens">
+      <EntityTypeMapping TypeName="ParkingModel.BienSoDen">
+        <MappingFragment StoreEntitySet="BienSoDen">
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+          <ScalarProperty Name="Digit" ColumnName="Digit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlackBoxes">
+      <EntityTypeMapping TypeName="ParkingModel.BlackBox">
+        <MappingFragment StoreEntitySet="BlackBox">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="ParkingModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="Digit" ColumnName="Digit" />
+          <ScalarProperty Name="IDIn" ColumnName="IDIn" />
+          <ScalarProperty Name="IDOut" ColumnName="IDOut" />
+          <ScalarProperty Name="CostIn" ColumnName="CostIn" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Seri" ColumnName="Seri" />
+          <ScalarProperty Name="IDTicketMonth" ColumnName="IDTicketMonth" />
+          <ScalarProperty Name="IDPart" ColumnName="IDPart" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Images2" ColumnName="Images2" />
+          <ScalarProperty Name="Images3" ColumnName="Images3" />
+          <ScalarProperty Name="Images4" ColumnName="Images4" />
+          <ScalarProperty Name="MatThe" ColumnName="MatThe" />
+          <ScalarProperty Name="Computer" ColumnName="Computer" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="CostBefore" ColumnName="CostBefore" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Computers">
+      <EntityTypeMapping TypeName="ParkingModel.Computer">
+        <MappingFragment StoreEntitySet="Computer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPart" ColumnName="IDPart" />
+          <ScalarProperty Name="Normal1" ColumnName="Normal1" />
+          <ScalarProperty Name="Normal2" ColumnName="Normal2" />
+          <ScalarProperty Name="Normal3" ColumnName="Normal3" />
+          <ScalarProperty Name="Night" ColumnName="Night" />
+          <ScalarProperty Name="HourBegin" ColumnName="HourBegin" />
+          <ScalarProperty Name="HourEnd" ColumnName="HourEnd" />
+          <ScalarProperty Name="HourBeginPT" ColumnName="HourBeginPT" />
+          <ScalarProperty Name="HourEndPT" ColumnName="HourEndPT" />
+          <ScalarProperty Name="Normal4" ColumnName="Normal4" />
+          <ScalarProperty Name="isAdd" ColumnName="isAdd" />
+          <ScalarProperty Name="UnitTicket" ColumnName="UnitTicket" />
+          <ScalarProperty Name="MoneyTicket" ColumnName="MoneyTicket" />
+          <ScalarProperty Name="NewTicket" ColumnName="NewTicket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Functionals">
+      <EntityTypeMapping TypeName="ParkingModel.Functional">
+        <MappingFragment StoreEntitySet="Functional">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sec" ColumnName="Sec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="ParkingModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="LoaiThaoTac" ColumnName="LoaiThaoTac" />
+          <ScalarProperty Name="ThongTin" ColumnName="ThongTin" />
+          <ScalarProperty Name="NguoiXuLy" ColumnName="NguoiXuLy" />
+          <ScalarProperty Name="NgayXuly" ColumnName="NgayXuly" />
+          <ScalarProperty Name="May" ColumnName="May" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parts">
+      <EntityTypeMapping TypeName="ParkingModel.Part">
+        <MappingFragment StoreEntitySet="Part">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SetCards">
+      <EntityTypeMapping TypeName="ParkingModel.SetCard">
+        <MappingFragment StoreEntitySet="SetCard">
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="isEmSaveLostTicket" ColumnName="isEmSaveLostTicket" />
+          <ScalarProperty Name="isSeeReport" ColumnName="isSeeReport" />
+          <ScalarProperty Name="numberOfDay" ColumnName="numberOfDay" />
+          <ScalarProperty Name="isGetMoneyTicket" ColumnName="isGetMoneyTicket" />
+          <ScalarProperty Name="LostCard" ColumnName="LostCard" />
+          <ScalarProperty Name="TotalSpace" ColumnName="TotalSpace" />
+          <ScalarProperty Name="TicketSpace" ColumnName="TicketSpace" />
+          <ScalarProperty Name="TicketLimitDay" ColumnName="TicketLimitDay" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="NightLimit" ColumnName="NightLimit" />
+          <ScalarProperty Name="TitleReport" ColumnName="TitleReport" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SmartCards">
+      <EntityTypeMapping TypeName="ParkingModel.SmartCard">
+        <MappingFragment StoreEntitySet="SmartCard">
+          <ScalarProperty Name="Identify" ColumnName="Identify" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Using" ColumnName="Using" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="DayUnlimit" ColumnName="DayUnlimit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TicketLogs">
+      <EntityTypeMapping TypeName="ParkingModel.TicketLog">
+        <MappingFragment StoreEntitySet="TicketLog">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateProcess" ColumnName="DateProcess" />
+          <ScalarProperty Name="Digit" ColumnName="Digit" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CarKind" ColumnName="CarKind" />
+          <ScalarProperty Name="IDPart" ColumnName="IDPart" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ChargesAmount" ColumnName="ChargesAmount" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="DayUnLimit" ColumnName="DayUnLimit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TicketMoneys">
+      <EntityTypeMapping TypeName="ParkingModel.TicketMoney">
+        <MappingFragment StoreEntitySet="TicketMoney">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Stt" ColumnName="Stt" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Digit" ColumnName="Digit" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IDPart" ColumnName="IDPart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TicketMonths">
+      <EntityTypeMapping TypeName="ParkingModel.TicketMonth">
+        <MappingFragment StoreEntitySet="TicketMonth">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Stt" ColumnName="Stt" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="Digit" ColumnName="Digit" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CarKind" ColumnName="CarKind" />
+          <ScalarProperty Name="IDPart" ColumnName="IDPart" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ChargesAmount" ColumnName="ChargesAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="DayUnLimit" ColumnName="DayUnLimit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserCars">
+      <EntityTypeMapping TypeName="ParkingModel.UserCar">
+        <MappingFragment StoreEntitySet="UserCar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Working" ColumnName="Working" />
+          <ScalarProperty Name="IDFunct" ColumnName="IDFunct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkAssigns">
+      <EntityTypeMapping TypeName="ParkingModel.WorkAssign">
+        <MappingFragment StoreEntitySet="WorkAssign">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="Computer" ColumnName="Computer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="BC_DANH_SÁCH_VÉ_THÁNG" FunctionName="ParkingModel.Store.BC_DANH_SÁCH_VÉ_THÁNG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.BC_DANH_SÁCH_VÉ_THÁNG_Result">
+          <ScalarProperty Name="tenhienthi" ColumnName="tenhienthi" />
+          <ScalarProperty Name="tenthamso" ColumnName="tenthamso" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="defaulttype" ColumnName="defaulttype" />
+          <ScalarProperty Name="giatrithamso" ColumnName="giatrithamso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BC_DANH_SÁCH_VÉ_THÁNG_TỔNG_QUÁT" FunctionName="ParkingModel.Store.BC_DANH_SÁCH_VÉ_THÁNG_TỔNG_QUÁT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.BC_DANH_SÁCH_VÉ_THÁNG_TỔNG_QUÁT_Result">
+          <ScalarProperty Name="tenhienthi" ColumnName="tenhienthi" />
+          <ScalarProperty Name="tenthamso" ColumnName="tenthamso" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="defaulttype" ColumnName="defaulttype" />
+          <ScalarProperty Name="giatrithamso" ColumnName="giatrithamso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BC_DANH_SÁCH_VÉ_THÁNG1" FunctionName="ParkingModel.Store.BC_DANH_SÁCH_VÉ_THÁNG1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.BC_DANH_SÁCH_VÉ_THÁNG1_Result">
+          <ScalarProperty Name="tenhienthi" ColumnName="tenhienthi" />
+          <ScalarProperty Name="tenthamso" ColumnName="tenthamso" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="defaulttype" ColumnName="defaulttype" />
+          <ScalarProperty Name="giatrithamso" ColumnName="giatrithamso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BC_TIỀN_THU_VÉ_THÁNG" FunctionName="ParkingModel.Store.BC_TIỀN_THU_VÉ_THÁNG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.BC_TIỀN_THU_VÉ_THÁNG_Result">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Stt" ColumnName="Stt" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="Digit" ColumnName="Digit" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CarKind" ColumnName="CarKind" />
+          <ScalarProperty Name="IDPart" ColumnName="IDPart" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ChargesAmount" ColumnName="ChargesAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="DayUnLimit" ColumnName="DayUnLimit" />
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CarLogTicketmonthDetail" FunctionName="ParkingModel.Store.CarLogTicketmonthDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.CarLogTicketmonthDetail_Result">
+          <ScalarProperty Name="THAO_TÁC" ColumnName="THAO TÁC" />
+          <ScalarProperty Name="NGÀY_XỬ_LÝ" ColumnName="NGÀY XỬ LÝ" />
+          <ScalarProperty Name="HỌ_TÊN" ColumnName="HỌ TÊN" />
+          <ScalarProperty Name="BIỂN_SỐ" ColumnName="BIỂN SỐ" />
+          <ScalarProperty Name="SỐ_TIỀN" ColumnName="SỐ TIỀN" />
+          <ScalarProperty Name="LOẠI_XE" ColumnName="LOẠI XE" />
+          <ScalarProperty Name="GHI_CHÚ" ColumnName="GHI CHÚ" />
+          <ScalarProperty Name="LÀ_CÁN_BỘ" ColumnName="LÀ CÁN BỘ" />
+          <ScalarProperty Name="NGÀY_BẮT_ĐẦU" ColumnName="NGÀY BẮT ĐẦU" />
+          <ScalarProperty Name="NGÀY_HẾT_HẠN" ColumnName="NGÀY HẾT HẠN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CT_CÔNG_THỨC_CÔNG_VĂN" FunctionName="ParkingModel.Store.CT_CÔNG_THỨC_CÔNG_VĂN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.CT_CÔNG_THỨC_CÔNG_VĂN_Result">
+          <ScalarProperty Name="LOẠI_XE" ColumnName="LOẠI XE" />
+          <ScalarProperty Name="GIỜ_BẮT_ĐẦU_ĐÊM" ColumnName="GIỜ BẮT ĐẦU ĐÊM" />
+          <ScalarProperty Name="PHÚT_BẮT_ĐẦU_ĐÊM" ColumnName="PHÚT BẮT ĐẦU ĐÊM" />
+          <ScalarProperty Name="GIỜ_KẾT_THÚC_ĐÊM" ColumnName="GIỜ KẾT THÚC ĐÊM" />
+          <ScalarProperty Name="PHÚT_KẾT_THÚC_ĐÊM" ColumnName="PHÚT KẾT THÚC ĐÊM" />
+          <ScalarProperty Name="GIÁ_NGÀY" ColumnName="GIÁ NGÀY" />
+          <ScalarProperty Name="GIÁ_ĐÊM" ColumnName="GIÁ ĐÊM" />
+          <ScalarProperty Name="GIÁ_QUA_NGÀY" ColumnName="GIÁ QUA NGÀY" />
+          <ScalarProperty Name="GIAO_NGÀY_VÀ_ĐÊM__PHÚT_" ColumnName="GIAO NGÀY VÀ ĐÊM (PHÚT)" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="cttt_CÔNG_THỨC_TĂNG_THEO_GIỜ" FunctionName="ParkingModel.Store.cttt_CÔNG_THỨC_TĂNG_THEO_GIỜ" />
+    <FunctionImportMapping FunctionImportName="DailyReportDetail" FunctionName="ParkingModel.Store.DailyReportDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.DailyReportDetail_Result">
+          <ScalarProperty Name="MÃ_THẺ" ColumnName="MÃ THẺ" />
+          <ScalarProperty Name="BIỂN_SỐ" ColumnName="BIỂN SỐ" />
+          <ScalarProperty Name="NGÀY_VÀO" ColumnName="NGÀY VÀO" />
+          <ScalarProperty Name="NGÀY_RA" ColumnName="NGÀY RA" />
+          <ScalarProperty Name="TIỀN_XE" ColumnName="TIỀN XE" />
+          <ScalarProperty Name="MÁY" ColumnName="MÁY" />
+          <ScalarProperty Name="VÉ_THÁNG" ColumnName="VÉ THÁNG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DailyReportTotal" FunctionName="ParkingModel.Store.DailyReportTotal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.DailyReportTotal_Result">
+          <ScalarProperty Name="MÁY" ColumnName="MÁY" />
+          <ScalarProperty Name="TIỀN_THU_VÃNG_LAI" ColumnName="TIỀN THU VÃNG LAI" />
+          <ScalarProperty Name="VÉ_VÃNG_LAI" ColumnName="VÉ VÃNG LAI" />
+          <ScalarProperty Name="TIỀN_THU_VÉ_THÁNG" ColumnName="TIỀN THU VÉ THÁNG" />
+          <ScalarProperty Name="VÉ_THÁNG_RA" ColumnName="VÉ THÁNG RA" />
+          <ScalarProperty Name="TỔNG_CỘNG" ColumnName="TỔNG CỘNG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getcttt1" FunctionName="ParkingModel.Store.getcttt1" />
+    <FunctionImportMapping FunctionImportName="getmoney" FunctionName="ParkingModel.Store.getmoney" />
+    <FunctionImportMapping FunctionImportName="MonthlyReportTotal" FunctionName="ParkingModel.Store.MonthlyReportTotal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.MonthlyReportTotal_Result">
+          <ScalarProperty Name="NGÀY" ColumnName="NGÀY" />
+          <ScalarProperty Name="TIỀN_XE_LƯỢT" ColumnName="TIỀN XE LƯỢT" />
+          <ScalarProperty Name="TIỀN_THÊM_VÉ_THÁNG" ColumnName="TIỀN THÊM VÉ THÁNG" />
+          <ScalarProperty Name="TIỀN_GIA_HẠN_VÉ_THÁNG" ColumnName="TIỀN GIA HẠN VÉ THÁNG" />
+          <ScalarProperty Name="TIỀN_XÓA_VÉ_THÁNG" ColumnName="TIỀN XÓA VÉ THÁNG" />
+          <ScalarProperty Name="TIỀN_MẤT_THẺ" ColumnName="TIỀN MẤT THẺ" />
+          <ScalarProperty Name="TỔNG_TIỀN_THU" ColumnName="TỔNG TIỀN THU" />
+          <ScalarProperty Name="SỐ_LƯỢT_TẠO_VÉ_THÁNG" ColumnName="SỐ LƯỢT TẠO VÉ THÁNG" />
+          <ScalarProperty Name="SỐ_LƯỢT_GIA_HẠN_VÉ_THÁNG" ColumnName="SỐ LƯỢT GIA HẠN VÉ THÁNG" />
+          <ScalarProperty Name="SỐ_LƯỢT_XÓA_VÉ_THÁNG" ColumnName="SỐ LƯỢT XÓA VÉ THÁNG" />
+          <ScalarProperty Name="SỐ_LƯỢT_MẤT_THẺ" ColumnName="SỐ LƯỢT MẤT THẺ" />
+          <ScalarProperty Name="XÓA_DỮ_LIỆU_XE" ColumnName="XÓA DỮ LIỆU XE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PossReportTotal" FunctionName="ParkingModel.Store.PossReportTotal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.PossReportTotal_Result">
+          <ScalarProperty Name="HỌ_TÊN" ColumnName="HỌ TÊN" />
+          <ScalarProperty Name="BIỂN_SỐ" ColumnName="BIỂN SỐ" />
+          <ScalarProperty Name="THỜI_GIAN_VÀO" ColumnName="THỜI GIAN VÀO" />
+          <ScalarProperty Name="THỜI_GIAN_RA" ColumnName="THỜI GIAN RA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WeeklyReportTotal" FunctionName="ParkingModel.Store.WeeklyReportTotal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParkingModel.WeeklyReportTotal_Result">
+          <ScalarProperty Name="NGÀY" ColumnName="NGÀY" />
+          <ScalarProperty Name="TIỀN_XE_LƯỢT" ColumnName="TIỀN XE LƯỢT" />
+          <ScalarProperty Name="TIỀN_THÊM_VÉ_THÁNG" ColumnName="TIỀN THÊM VÉ THÁNG" />
+          <ScalarProperty Name="TIỀN_GIA_HẠN_VÉ_THÁNG" ColumnName="TIỀN GIA HẠN VÉ THÁNG" />
+          <ScalarProperty Name="TIỀN_XÓA_VÉ_THÁNG" ColumnName="TIỀN XÓA VÉ THÁNG" />
+          <ScalarProperty Name="TIỀN_MẤT_THẺ" ColumnName="TIỀN MẤT THẺ" />
+          <ScalarProperty Name="TỔNG_TIỀN_THU" ColumnName="TỔNG TIỀN THU" />
+          <ScalarProperty Name="SỐ_LƯỢT_TẠO_VÉ_THÁNG" ColumnName="SỐ LƯỢT TẠO VÉ THÁNG" />
+          <ScalarProperty Name="SỐ_LƯỢT_GIA_HẠN_VÉ_THÁNG" ColumnName="SỐ LƯỢT GIA HẠN VÉ THÁNG" />
+          <ScalarProperty Name="SỐ_LƯỢT_XÓA_VÉ_THÁNG" ColumnName="SỐ LƯỢT XÓA VÉ THÁNG" />
+          <ScalarProperty Name="SỐ_LƯỢT_MẤT_THẺ" ColumnName="SỐ LƯỢT MẤT THẺ" />
+          <ScalarProperty Name="XÓA_DỮ_LIỆU_XE" ColumnName="XÓA DỮ LIỆU XE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

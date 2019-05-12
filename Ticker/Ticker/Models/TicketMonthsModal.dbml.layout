@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 16.875" name="TicketMonthsModal">
+  <DataContextMoniker Name="/TicketMonthsModalDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0f0df449-9bcc-4708-99a4-94bc9bb5217f" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/BaoCao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56a62053-388c-4e92-b66a-0f756f2386b5" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cf6c2d9-00b5-4430-a465-748b281a9ee7" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/WorkAssign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d415da5-7144-4687-819f-d4421ecbc151" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f04b45f-8694-4d28-955d-ac3758cfa4a5" absoluteBounds="0.75, 3.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/Barier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d287f43-c674-4cdd-9693-5ae8e8c21b10" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a2672ed-7eb1-414a-874f-ead5f95643f2" absoluteBounds="3.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/BienSoDen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74f0a787-1ee5-418d-ba29-86a4ea2607d9" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6a0213b-dff7-4467-8236-5818ec896e2c" absoluteBounds="3.75, 5.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/BlackBox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a82213e-620d-4dda-992c-286c1fb0b8c4" absoluteBounds="3.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddbc30ba-f0fc-453d-a434-0fe51902b096" absoluteBounds="6.75, 0.75, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/Car" />
+      <nestedChildShapes>
+        <elementListCompartment Id="879be9c6-93ea-4e70-9a33-208d66c283a8" absoluteBounds="6.765, 1.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b4f3bd7-cca1-4bf9-add6-089a8018c568" absoluteBounds="6.75, 6.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/Computer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="623f730b-6787-44b9-b031-ff0ce88784c7" absoluteBounds="6.765, 7.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbe9e09b-c619-4b34-b7ba-81c985d821e0" absoluteBounds="0.75, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/Functional" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdd39b6e-396a-44b6-8649-af7e6b42b0bc" absoluteBounds="0.765, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b175f6bd-fcdb-4764-8bfa-183566857047" absoluteBounds="9.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4370ddf9-604b-49f7-ae2b-680b5326927c" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96ad9845-af41-4b9f-9465-f0e378668c66" absoluteBounds="9.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/Part" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2dd382e-90fd-4031-8254-2a5ec313a434" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c00e4c8b-897e-40dd-9be3-f0dd0dbeab7e" absoluteBounds="9.75, 6.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/SetCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bac1cc4b-f57b-475c-92c8-417c302bc87d" absoluteBounds="9.765, 7.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bea210ad-d831-48ef-ba44-dedd358c45fb" absoluteBounds="0.75, 10.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/SmartCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a84f0fce-2e0f-42a2-8cea-5a2d6f1bb409" absoluteBounds="0.765, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f27f1c4c-2920-43fb-8296-8afee8d09484" absoluteBounds="3.75, 11.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/TicketLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da919e4b-8542-494e-bce2-b29ced15791c" absoluteBounds="3.765, 12.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1107965-b67a-4fa8-8e13-3b0c29131f81" absoluteBounds="6.75, 11.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/TicketMoney" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8dd15bb-e4a2-4cb9-8ec6-f032f84bfcff" absoluteBounds="6.765, 12.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbdc28d4-98f4-4538-9dc3-c562e1fbb60d" absoluteBounds="9.75, 11.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/TicketMonth" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9d5e34b-cd9e-43a2-b7ca-8a2d7c333cc4" absoluteBounds="9.765, 12.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90f64166-df75-4ca6-a23d-30a04930e5b4" absoluteBounds="12.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TicketMonthsModalDataContext/UserCar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a29509d5-a050-4252-9417-0aef3feb00bc" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

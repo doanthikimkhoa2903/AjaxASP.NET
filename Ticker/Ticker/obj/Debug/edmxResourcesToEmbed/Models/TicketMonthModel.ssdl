@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParkingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BaoCao">
+    <Key>
+      <PropertyRef Name="Thang" />
+      <PropertyRef Name="LoaiXe" />
+    </Key>
+    <Property Name="Thang" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoaiXe" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="LuotVao" Type="nvarchar" MaxLength="50" />
+    <Property Name="LuotRa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tien" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Barier">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="int" Nullable="false" />
+    <Property Name="DateTick" Type="datetime" />
+    <Property Name="ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Way" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDPart" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsTicketMonth" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BienSoDen">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Digit" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BlackBox">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TimeStart" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TimeStart" Type="datetime" Nullable="false" />
+    <Property Name="TimeEnd" Type="datetime" />
+    <Property Name="Digit" Type="nvarchar" MaxLength="200" />
+    <Property Name="IDIn" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDOut" Type="nvarchar" MaxLength="50" />
+    <Property Name="CostIn" Type="int" />
+    <Property Name="Cost" Type="int" />
+    <Property Name="Part" Type="nvarchar" MaxLength="50" />
+    <Property Name="Seri" Type="int" />
+    <Property Name="IDTicketMonth" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDPart" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar" MaxLength="150" />
+    <Property Name="Images2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Images3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Images4" Type="nvarchar" MaxLength="150" />
+    <Property Name="MatThe" Type="int" />
+    <Property Name="Computer" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="350" />
+    <Property Name="Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="CostBefore" Type="int" />
+    <Property Name="DateUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Computer">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="IDPart" />
+      <PropertyRef Name="Normal1" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IDPart" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Normal1" Type="int" Nullable="false" />
+    <Property Name="Normal2" Type="int" Nullable="false" />
+    <Property Name="Normal3" Type="int" Nullable="false" />
+    <Property Name="Night" Type="int" Nullable="false" />
+    <Property Name="HourBegin" Type="int" Nullable="false" />
+    <Property Name="HourEnd" Type="int" Nullable="false" />
+    <Property Name="HourBeginPT" Type="int" />
+    <Property Name="HourEndPT" Type="int" />
+    <Property Name="Normal4" Type="int" />
+    <Property Name="isAdd" Type="int" />
+    <Property Name="UnitTicket" Type="int" />
+    <Property Name="MoneyTicket" Type="int" />
+    <Property Name="NewTicket" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Functional">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sec" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="LoaiThaoTac" />
+      <PropertyRef Name="NgayXuly" />
+    </Key>
+    <Property Name="LoaiThaoTac" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ThongTin" Type="nvarchar" MaxLength="500" />
+    <Property Name="NguoiXuLy" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayXuly" Type="datetime" Nullable="false" />
+    <Property Name="May" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Part">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Sign" Type="nchar" MaxLength="2" />
+    <Property Name="Limit" Type="int" />
+  </EntityType>
+  <EntityType Name="SetCard">
+    <Key>
+      <PropertyRef Name="Kind" />
+    </Key>
+    <Property Name="Kind" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="isEmSaveLostTicket" Type="bit" />
+    <Property Name="isSeeReport" Type="bit" />
+    <Property Name="numberOfDay" Type="int" />
+    <Property Name="isGetMoneyTicket" Type="bit" />
+    <Property Name="LostCard" Type="int" />
+    <Property Name="TotalSpace" Type="int" />
+    <Property Name="TicketSpace" Type="int" />
+    <Property Name="TicketLimitDay" Type="int" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="50" />
+    <Property Name="NightLimit" Type="int" />
+    <Property Name="TitleReport" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SmartCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Identify" Type="int" Nullable="false" />
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Using" Type="bit" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="DayUnlimit" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TicketLog">
+    <Key>
+      <PropertyRef Name="ProcessType" />
+      <PropertyRef Name="STT" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DateProcess" />
+      <PropertyRef Name="Digit" />
+    </Key>
+    <Property Name="RowID" Type="int" />
+    <Property Name="ProcessType" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="STT" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID" Type="nvarchar" MaxLength="18" Nullable="false" />
+    <Property Name="DateProcess" Type="datetime" Nullable="false" />
+    <Property Name="Digit" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="250" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="CarKind" Type="nvarchar" MaxLength="150" />
+    <Property Name="IDPart" Type="nvarchar" MaxLength="150" />
+    <Property Name="DateStart" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateEnd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="150" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="150" />
+    <Property Name="ChargesAmount" Type="nvarchar" MaxLength="150" />
+    <Property Name="Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="DayUnLimit" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="TicketMoney">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="Month" />
+    </Key>
+    <Property Name="RowID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Month" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Stt" Type="int" />
+    <Property Name="ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Digit" Type="nvarchar" MaxLength="200" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="200" />
+    <Property Name="Company" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="IDPart" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TicketMonth">
+    <Key>
+      <PropertyRef Name="Stt" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ProcessDate" />
+    </Key>
+    <Property Name="RowID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stt" Type="int" Nullable="false" />
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProcessDate" Type="datetime" Nullable="false" />
+    <Property Name="Digit" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="200" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="200" />
+    <Property Name="Company" Type="nvarchar" MaxLength="200" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="CarKind" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDPart" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateStart" Type="datetime" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChargesAmount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="DayUnLimit" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserCar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Account" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pass" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NameUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sex" Type="bit" Nullable="false" />
+    <Property Name="Working" Type="bit" />
+    <Property Name="IDFunct" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkAssign">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TimeStart" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TimeStart" Type="datetime" Nullable="false" />
+    <Property Name="TimeEnd" Type="datetime" />
+    <Property Name="Computer" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="BC_DANH_SÁCH_VÉ_THÁNG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="BC-DANH SÁCH VÉ THÁNG">
+    <Parameter Name="DanhSachVeThang" Type="nvarchar" Mode="In" />
+    <Parameter Name="DanhSach2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="BC_DANH_SÁCH_VÉ_THÁNG_TỔNG_QUÁT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="BC-DANH SÁCH VÉ THÁNG TỔNG QUÁT">
+    <Parameter Name="DanhSachVeThang" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="BC_DANH_SÁCH_VÉ_THÁNG1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="BC-DANH SÁCH VÉ THÁNG1">
+    <Parameter Name="DanhSachVeThang" Type="nvarchar" Mode="In" />
+    <Parameter Name="DanhSach" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="BC_TIỀN_THU_VÉ_THÁNG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="BC-TIỀN THU VÉ THÁNG">
+    <Parameter Name="DanhSachVeThang" Type="nvarchar" Mode="In" />
+    <Parameter Name="DanhSach2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="CarLogTicketmonthDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Now" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="CT_CÔNG_THỨC_CÔNG_VĂN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="CT-CÔNG THỨC CÔNG VĂN">
+    <Parameter Name="BatDau" Type="datetime" Mode="In" />
+    <Parameter Name="KetThuc" Type="datetime" Mode="In" />
+    <Parameter Name="LoaiXe" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+    <Parameter Name="InputParam" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="cttt_CÔNG_THỨC_TĂNG_THEO_GIỜ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="cttt-CÔNG THỨC TĂNG THEO GIỜ">
+    <Parameter Name="start" Type="datetime" Mode="In" />
+    <Parameter Name="end" Type="datetime" Mode="In" />
+    <Parameter Name="idpart" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DailyReportDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Now" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="DailyReportTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Now" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="getcttt1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="start" Type="datetime" Mode="In" />
+    <Parameter Name="end" Type="datetime" Mode="In" />
+    <Parameter Name="idpart" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getmoney" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="daystart" Type="int" Mode="In" />
+    <Parameter Name="dayend" Type="int" Mode="In" />
+    <Parameter Name="idpart" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MonthlyReportTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Now" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="PossReportTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Now" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="WeeklyReportTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Now" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="ParkingModelStoreContainer">
+    <EntitySet Name="BaoCao" EntityType="Self.BaoCao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Barier" EntityType="Self.Barier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BienSoDen" EntityType="Self.BienSoDen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BlackBox" EntityType="Self.BlackBox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Computer" EntityType="Self.Computer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Functional" EntityType="Self.Functional" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Part" EntityType="Self.Part" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SetCard" EntityType="Self.SetCard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SmartCard" EntityType="Self.SmartCard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TicketLog" EntityType="Self.TicketLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TicketMoney" EntityType="Self.TicketMoney" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TicketMonth" EntityType="Self.TicketMonth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserCar" EntityType="Self.UserCar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkAssign" EntityType="Self.WorkAssign" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
